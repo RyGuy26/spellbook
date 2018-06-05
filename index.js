@@ -4,7 +4,7 @@ const input = document.getElementById("input")
 const sayContents = function(ev) {
  ev.preventDefault()
   const spells = document.querySelector('#spells')
-  spells.textContent = input.value
+  spells.textContent += " " + input.value
   input.value=""
 }
 
