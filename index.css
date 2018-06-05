@@ -35,16 +35,16 @@ h1 {
 }
 
 form {
-  margin-bottom: 1rem;
-  margin-left: 10vw;
-  width: 50vw;
-}
-
-form > div {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
+    margin-bottom: 1rem;
+    margin-left: 10vw;
+    width: 50vw;
+  }
+  
+  form > div {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
 
 input[type="text"] {
   flex: 1 1 0px;
@@ -74,12 +74,12 @@ input[type="text"]:focus {
 }
 
 .buttonWrapper {
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: center;
-  display: flex;
-  flex: 0 0 auto;
-}
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    display: flex;
+    flex: 0 0 auto;
+  }
 
 button[type="submit"] {
   background-color: #F8BE3D;
@@ -107,12 +107,12 @@ button[type="submit"]:hover {
   background-color: #dca936;
 }
 
-main {
+main  {
   box-sizing: border-box;
   background-image: url(parchment.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 50vw;
+  width: 25vw;
   margin-left: 10vw;
   height: calc(100vh - 18.5vw - 4rem);
   overflow-y: scroll;
@@ -122,6 +122,7 @@ main {
   padding: 1.5rem 4rem;
   box-shadow: 1px 1px 15px  rgba(0,0,0,0.4);
 }
+
 
 ul#spells {
  list-style: none;

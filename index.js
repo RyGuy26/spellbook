@@ -1,15 +1,15 @@
 const form = document.querySelector('form')
 
-const changeHeading = function(ev) {
+const addToSpells = function(ev) {
   ev.preventDefault()
-
   const f = ev.target
   const spellName = f.spellName.value
-
   const spellsDiv = document.querySelector('#spells')
-  spellsDiv.innerHTML += `<li>${spellName}</li>`
-
+  var points = document.createElement("ul");
+  var node = document.createTextNode(spellName);
+  points.appendChild(node);
+  spellsDiv.appendChild(points);
   f.reset()
 }
 
-form.addEventListener('submit', changeHeading)
+form.addEventListener('submit', addToSpells)
