@@ -1,12 +1,15 @@
-const button = document.querySelector('button')
 const form = document.querySelector('form')
-const input = document.getElementById("input")
-const sayContents = function(ev) {
- ev.preventDefault()
-  const spells = document.querySelector('#spells')
-  spells.textContent += " " + input.value
-  input.value=""
+
+const changeHeading = function(ev) {
+  ev.preventDefault()
+
+  const f = ev.target
+  const spellName = f.spellName.value
+
+  const spellsDiv = document.querySelector('#spells')
+  spellsDiv.innerHTML += `<li>${spellName}</li>`
+
+  f.reset()
 }
 
-
-form.addEventListener('submit', sayContents) 
+form.addEventListener('submit', changeHeading)
