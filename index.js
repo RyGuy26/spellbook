@@ -3,8 +3,9 @@ const form = document.querySelector('form')
 const input = document.getElementById("input")
 const sayContents = function(ev) {
  ev.preventDefault()
-  const heading = document.querySelector('#potions1')
-  heading.textContent = input.value
+  const spells = document.querySelector('#spells')
+  spells.textContent = input.value
+  input.value=""
 }
 
 
