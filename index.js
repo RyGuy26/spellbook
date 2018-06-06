@@ -30,7 +30,12 @@ const app = {
     childElements.forEach(el => {
       item.appendChild(el)
     })
-
+    const button = document.createElement('button')
+    button.textContent="Delete"
+    button.classList.add('delete')
+    childElements.forEach(el => {
+      el.appendChild(button)
+    })
     return item
   },
 
@@ -43,7 +48,11 @@ const app = {
       name: f.spellName.value,
       level: f.level.value,
     }
-
+    const data = []
+    for (let i=0;i<spell.index;i++){
+      data[i] = spells[i]
+    }
+    
     const item = this.renderItem(spell)
 
     const list = document.querySelector('#spells')
@@ -51,6 +60,7 @@ const app = {
 
     f.reset()
   },
+   
 }
 
 app.init()

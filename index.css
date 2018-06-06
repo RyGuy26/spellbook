@@ -109,6 +109,7 @@ button[type="submit"]:hover {
   background-color: #dca936;
 }
 
+
 main {
   box-sizing: border-box;
   background-image: url(parchment.jpeg);
@@ -153,4 +154,10 @@ input.small {
 }
 .level {
   color: cornflowerblue;
+}
+.delete{
+  width: 4vw;
+  height: 2vw;
+  padding-left: 2pt
+  
 }
