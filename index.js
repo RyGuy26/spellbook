@@ -1,31 +1,30 @@
 const form = document.querySelector('form')
+const renderProperty = function(name,value){
+   const el = document.createElement('span')
+  el.textContent = value
+  el.classList.add(name)
+  return el
+}
 
-const addToSpells = function(ev) {
+const handleSubmit = function(ev) {
   ev.preventDefault()
+
   const f = ev.target
   const spellName = f.spellName.value
-  const levelName = f.levelName.value
-  var spells = document.createTextNode(spellName);
-  var levels = document.createTextNode(levelName);
-  const spellsDiv = document.querySelector('#spells')
-  let a = buildListFromSpan(spells,levels)
+  const level = f.level.value
 
-   spellsDiv.appendChild(a)
+  const list = document.querySelector('#spells')
+  const nameSpan= renderProperty('spellName', spellName)
+  const levelSpan= renderProperty('level', level)
+ 
+    const item = document.createElement('li')
+    item.classList.add('spell')
+    item.appendChild(nameSpan)
+    item.appendChild(levelSpan)
+
+  list.appendChild(item)
+
   f.reset()
 }
-function buildListFromSpan(spells,levels){
-  const spanSpell= document.createElement("span")
-  const spanLevel= document.createElement("span")
-  spanSpell.setAttribute("class","spells")
-  spanLevel.setAttribute("class","levels")
-  spanSpell.appendChild(spells)
-  spanLevel.appendChild(levels)
-  return buildList(spanSpell,spanLevel)
-}
-function buildList(spanspell,spanLevel){
-  const listitem = document.createElement("li")
-  listitem.appendChild(spanspell)
-  listitem.appendChild(spanLevel)
-  return listitem
- }
-form.addEventListener('submit', addToSpells)
+
+form.addEventListener('submit', handleSubmit)

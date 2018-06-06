@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CHomemade+Apple%7CUnifrakturCook:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Homemade+Apple|UnifrakturCook:700');
 
 body {
   background: url(wood.jpg);
@@ -35,19 +35,20 @@ h1 {
 }
 
 form {
-    margin-bottom: 1rem;
-    margin-left: 10vw;
-    width: 50vw;
-  }
-  
-  form > div {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-  }
+  margin-bottom: 1rem;
+  margin-left: 10vw;
+  width: 50vw;
+}
 
-input[type="text"],input[type ="number"] {
-  flex: 1 1 0px;
+form > div {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+input[type="text"],
+input[type="number"] {
+  flex: 4 1 0;
   height: auto;
   min-width: 0;
   display: block;
@@ -66,7 +67,8 @@ input[type="text"],input[type ="number"] {
   appearance: none;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
   outline: 0;
   border: 1px solid #8a8a8a;
   background-color: #fefefe;
@@ -74,12 +76,12 @@ input[type="text"]:focus {
 }
 
 .buttonWrapper {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: center;
-    display: flex;
-    flex: 0 0 auto;
-  }
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex: 0 0 auto;
+}
 
 button[type="submit"] {
   background-color: #F8BE3D;
@@ -107,7 +109,7 @@ button[type="submit"]:hover {
   background-color: #dca936;
 }
 
-main  {
+main {
   box-sizing: border-box;
   background-image: url(parchment.jpeg);
   background-size: cover;
@@ -123,7 +125,6 @@ main  {
   box-shadow: 1px 1px 15px  rgba(0,0,0,0.4);
 }
 
-
 ul#spells {
  list-style: none;
  padding: 0;
@@ -132,4 +133,24 @@ ul#spells {
 .details {
   font-size: 0.7em;
   margin-top: -1rem;
+}
+
+input.small {
+  flex-grow: 1;
+}
+
+.spell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spellName {
+  text-decoration: underline;
+  max-width: 80%;
+
+  text-overflow: ellipsis;
+  padding-left: 0.1em;
+}
+.level {
+  color: cornflowerblue;
 }
