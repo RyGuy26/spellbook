@@ -4,28 +4,28 @@ const addToSpells = function(ev) {
   ev.preventDefault()
   const f = ev.target
   const spellName = f.spellName.value
-  const potionName = f.potionName.value
+  const levelName = f.levelName.value
   var spells = document.createTextNode(spellName);
-  var potions = document.createTextNode(potionName);
+  var levels = document.createTextNode(levelName);
   const spellsDiv = document.querySelector('#spells')
-  let a = buildListFromSpan(spells,potions)
+  let a = buildListFromSpan(spells,levels)
 
    spellsDiv.appendChild(a)
   f.reset()
 }
-function buildListFromSpan(spells,potions){
+function buildListFromSpan(spells,levels){
   const spanSpell= document.createElement("span")
-  const spanPotion= document.createElement("span")
+  const spanLevel= document.createElement("span")
   spanSpell.setAttribute("class","spells")
-  spanPotion.setAttribute("class","potions")
+  spanLevel.setAttribute("class","levels")
   spanSpell.appendChild(spells)
-  spanPotion.appendChild(potions)
-  return buildList(spanSpell,spanPotion)
+  spanLevel.appendChild(levels)
+  return buildList(spanSpell,spanLevel)
 }
-function buildList(spanspell,spanPotion){
+function buildList(spanspell,spanLevel){
   const listitem = document.createElement("li")
   listitem.appendChild(spanspell)
-  listitem.appendChild(spanPotion)
+  listitem.appendChild(spanLevel)
   return listitem
  }
 form.addEventListener('submit', addToSpells)
