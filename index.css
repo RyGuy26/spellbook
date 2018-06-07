@@ -109,7 +109,6 @@ button[type="submit"]:hover {
   background-color: #dca936;
 }
 
-
 main {
   box-sizing: border-box;
   background-image: url(parchment.jpeg);
@@ -147,17 +146,31 @@ input.small {
 
 .spell .name {
   text-decoration: underline;
-  max-width: 80%;
-
+  width: 80%;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   padding-left: 0.1em;
+  white-space: nowrap;
 }
 .level {
   color: cornflowerblue;
+  padding: 0 0.25em;
 }
-.delete{
-  width: 4vw;
-  height: 2vw;
-  padding-left: 2pt
-  
+
+button.delete {
+  background-color: #ff3333;
+  color: white;
+}
+
+button.fav {
+  background-color: #F8BE3D;
+  color: black;
+}
+
+.spell.fav {
+  background-color: goldenrod;
+}
+
+.template {
+  display: none;
 }
